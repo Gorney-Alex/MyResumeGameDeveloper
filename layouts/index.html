@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Резюме</title>
+    <link rel="stylesheet" href="/assets/css/stylesheet.css" />
+    <style>
+      :root {
+        --theme: rgb(255, 255, 255);
+        --entry: rgb(240, 240, 240);
+        --primary: rgb(29, 30, 32);
+        --secondary: rgb(80, 80, 80);
+        --tertiary: rgb(200, 200, 200);
+        --content: rgb(50, 50, 50);
+        --code-block-bg: rgb(245, 245, 245);
+        --code-bg: rgb(230, 230, 230);
+        --border: rgb(200, 200, 200);
+      }
+
+      body.dark {
+        --theme: rgb(29, 30, 32);
+        --entry: rgb(46, 46, 51);
+        --primary: rgb(218, 218, 219);
+        --secondary: rgb(155, 156, 157);
+        --tertiary: rgb(65, 66, 68);
+        --content: rgb(196, 196, 197);
+        --code-block-bg: rgb(46, 46, 51);
+        --code-bg: rgb(55, 56, 62);
+        --border: rgb(51, 51, 51);
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--theme);
+        color: var(--primary);
+        zoom: 1.2;
+      }
+      .main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 2rem;
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      .header {
+        padding: 1rem 2rem;
+        color: var(--primary);
+        text-align: left;
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .photo-name {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      .photo-name img {
+        width: 150px;
+        height: 200px;
+        border-radius: 20%;
+        object-fit: cover;
+        border: 4px solid white; /* Черный ободок */
+      }
+      h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      ul {
+        padding-left: 1.5rem;
+      }
+      ul li {
+        margin: 0.75rem 0;
+      }
+      .footer {
+        text-align: center;
+        padding: 1rem;
+        color: var(--primary);
+        margin-top: 2rem;
+      }
+      hr {
+        border: 1px solid var(--border);
+        margin: 2rem 0;
+      }
+      .theme-indicator {
+        font-size: 2rem;
+        cursor: pointer;
+      }
+      .more-info {
+        display: none;
+        margin-top: 1rem;
+      }
+      .show-more {
+        background-color: transparent;
+        color: var(--secondary);
+        border: 1px solid var(--tertiary);
+        padding: 0.25rem 0.5rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+      .show-more:hover {
+        background-color: var(--entry);
+      }
+      .portfolio-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 10px;
+        margin-top: 1rem;
+      }
+      .portfolio-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a
+          href="#"
+          style="
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+          "
+          >Резюме разработчика игр</a
+        >
+        <span class="theme-indicator">☀️</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="photo-name">
+        <img src="/images/myPhoto.png" alt="Мое фото" />
+        <h2>
+          Александр Юрьевич <br />
+          (Gorney-Alex)
+        </h2>
+      </section>
+
+      <section>
+        <h3>🧑‍💼 Краткая информация обо мне</h3>
+        <p>
+          Занимаюсь созданием игр на Unity C# около полугода. Разработал 2
+          небольшие игры, используя полностью свои ассеты. Также работал 3 года
+          3D художником на различные проекты по схеме заказчик исполнитель,
+          создавал модификации для игр.
+        </p>
+        <button class="show-more">Подробнее</button>
+        <div class="more-info">
+          <p>
+            Более 3 лет занимаюсь разработкой модификаций для игровых проектов,
+            включая создание 3D-моделей, текстур для зданий, декораций,
+            предметов и других элементов игровой среды. Разрабатывал игровые
+            локации с использованием собственных ассетов. В январе 2025 года
+            реализовал первый самостоятельный игровой проект - "Dinosaur Run
+            3D", целью которого было освоение функционала игрового движка и
+            отработка ключевых аспектов геймдева. Разработал и выпустил второй
+            проект - "Speed race 3D", отличающийся расширенным набором игровых
+            механик и повышенной сложностью их технической реализации.
+          </p>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h3>📚 Обучение</h3>
+        <p>
+          Являюсь студентом 3 курса Российского экономического университета
+          имени Г. В. Плеханова, обучаюсь по направлению «Математическое
+          обеспечение и администрирование информационных систем» с профилем
+          «Системное и интернет-программирование». Год окончания обучения —
+          2026.
+        </p>
+
+        <hr />
+
+        <h3>🛠 Профессиональные навыки</h3>
+        <ul>
+          <li>Владение базовым уровнем C#</li>
+          <li>Владение базовым уровнем Unity</li>
+          <li>Владение средним уровнем Blender</li>
+          <li>Владение средним уровнем Aseprite</li>
+        </ul>
+
+        <hr />
+
+        <h3>🤝 Личные качества</h3>
+        <ul>
+          <p>
+            Вовлеченность, креативность, стрессоустойчивость, упорность,
+            ответственность, дисциплинированность, гибкость, умение работать в
+            команде
+          </p>
+        </ul>
+
+        <hr />
+
+        <h2>📞 Контакты</h2>
+        <a href="https://t.me/gorneyGg" target="_blank">
+          <img
+            src="/images/telegram.png"
+            alt="Telegram"
+            style="width: 40px; height: 40px"
+          />
+        </a>
+        <a href="https://vk.com/gorneycop" target="_blank">
+          <img
+            src="/images/vk.png"
+            alt="Vk"
+            style="width: 40px; height: 40px"
+          />
+        </a>
+        <a href="https://github.com/Gorney-Alex" target="_blank">
+          <img
+            src="/images/gitHub.svg"
+            alt="GitHub"
+            style="width: 40px; height: 40px"
+          />
+        </a>
+        <a href="mailto:your_gorneyalexandr@gmail.com">
+          <img
+            src="/images/gmail.png"
+            alt="Gmail"
+            style="width: 42px; height: 42xpx"
+          />
+        </a>
+      </section>
+
+      <hr />
+
+      <section>
+        <h3>🖼️ Портфолио</h3>
+        <ul>
+          <a
+            href="https://vkvideo.ru/video411554766_456240762"
+            target="_blank"
+            style="color: blue; text-decoration: none; font-weight: bold"
+          >
+            Посмотреть Dinosaur Run 3D
+          </a>
+          <br />
+          <a
+            href="https://vkvideo.ru/video411554766_456240762"
+            target="_blank"
+            style="color: blue; text-decoration: none; font-weight: bold"
+          >
+            Посмотреть Speed race 3D
+          </a>
+        </ul>
+        <div class="portfolio-gallery" id="portfolio-gallery"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>&copy; 2025 My New Hugo Site</span>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("pref-theme");
+        const body = document.body;
+        const themeIndicator = document.querySelector(".theme-indicator");
+
+        if (savedTheme === "dark") {
+          body.classList.add("dark");
+          themeIndicator.textContent = "🌙";
+        }
+
+        themeIndicator.addEventListener("click", () => {
+          body.classList.toggle("dark");
+          const newTheme = body.classList.contains("dark") ? "dark" : "light";
+          themeIndicator.textContent = newTheme === "dark" ? "🌙" : "☀️";
+          localStorage.setItem("pref-theme", newTheme);
+        });
+
+        const showMoreBtn = document.querySelector(".show-more");
+        const moreInfo = document.querySelector(".more-info");
+
+        showMoreBtn.addEventListener("click", () => {
+          moreInfo.style.display =
+            moreInfo.style.display === "none" || moreInfo.style.display === ""
+              ? "block"
+              : "none";
+          showMoreBtn.textContent =
+            moreInfo.style.display === "block" ? "Скрыть" : "Подробнее";
+        });
+
+        // Загрузка изображений портфолио
+        const portfolioGallery = document.getElementById("portfolio-gallery");
+        const images = [
+          "portfolio1.jpg",
+          "portfolio2.jpg",
+          "portfolio3.jpg",
+          "portfolio4.jpg",
+          "portfolio5.jpg",
+          "portfolio6.png",
+          "portfolio7.png",
+          "portfolio8.png",
+          "portfolio9.png",
+        ]; // Пример имен файлов
+        images.forEach((image) => {
+          const imgElement = document.createElement("img");
+          imgElement.src = `/portfolio/${image}`;
+          imgElement.alt = "Проект из портфолио";
+          portfolioGallery.appendChild(imgElement);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.rounded-image {
+  border-radius: 50% !important;
+  width: 16px !important;
+  height: 16px !important;
+  object-fit: cover !important;
+}
+
+body {
+  background-color: red; /* Просто для проверки */
+}
