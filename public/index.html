@@ -68,6 +68,9 @@
         object-fit: cover;
         border: 4px solid white;  
       }
+      body:not(.dark) .photo-name img {
+        border-color: black;  
+      }
       h1 {
         margin: 0;
         font-size: 3rem;
@@ -128,6 +131,16 @@
         border-radius: 0.5rem;
         object-fit: cover;
       }
+      .game-link {
+        color: rgb(30, 144, 255);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .game-link:hover {
+        color: gray;  
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -140,8 +153,7 @@
             text-decoration: none;
             font-weight: bold;
           "
-          >Резюме разработчика игр</a
-        >
+        ></a>
         <span class="theme-indicator">☀️</span>
       </div>
     </header>
@@ -195,10 +207,22 @@
 
         <h3>🛠 Профессиональные навыки</h3>
         <ul>
-          <li>Владение базовым уровнем C#</li>
-          <li>Владение базовым уровнем Unity</li>
-          <li>Владение средним уровнем Blender</li>
-          <li>Владение средним уровнем Aseprite</li>
+          <li>C# (базовый уровень) – основы ООП, написание скриптов</li>
+          <li>
+            Unity (базовый уровень) – создание игровых сцен, работа с UI и
+            физическим движком
+          </li>
+          <li>
+            Blender (средний уровень) – 3D-моделирование, текстурирование,
+            анимации, освещение
+          </li>
+          <li>Aseprite (средний уровень) – создание пиксельной графики</li>
+          <li>Git, GitHub – ведение проектов, работа с ветками, коммитами</li>
+          <li>
+            WPS Excel, Google Sheets – анализ данных, работа с формулами и
+            диаграммами
+          </li>
+          <li>Draw.io – создание схем и диаграмм для проектирования</li>
         </ul>
 
         <hr />
@@ -250,21 +274,29 @@
       <section>
         <h3>🖼️ Портфолио</h3>
         <ul>
-          <a
-            href="https://vkvideo.ru/video411554766_456240762"
-            target="_blank"
-            style="color: blue; text-decoration: none; font-weight: bold"
-          >
-            Посмотреть Dinosaur Run 3D
-          </a>
-          <br />
-          <a
-            href="https://vkvideo.ru/video411554766_456240762"
-            target="_blank"
-            style="color: blue; text-decoration: none; font-weight: bold"
-          >
-            Посмотреть Speed race 3D
-          </a>
+          <p style="font-weight: bold; color: var(--primary)">
+            2025 Январь -
+            <a
+              href="https://vkvideo.ru/video411554766_456240763"
+              target="_blank"
+              class="game-link"
+            >
+              Dinosaur Run
+            </a>
+            (игра)
+          </p>
+
+          <p style="font-weight: bold; color: var(--primary)">
+            2025 Март -
+            <a
+              href="https://vkvideo.ru/video411554766_456240764"
+              target="_blank"
+              class="game-link"
+            >
+              Speed race
+            </a>
+            (игра)
+          </p>
         </ul>
         <div class="portfolio-gallery" id="portfolio-gallery"></div>
       </section>
